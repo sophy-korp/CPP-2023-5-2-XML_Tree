@@ -7,6 +7,8 @@
 using iterator = std::list<std::shared_ptr<XML_Node>>::iterator;
 class XMLResource {
 public:
+	XMLResource(XMLResource const&) = delete;
+	XMLResource(XMLResource&&) = delete;
 	static std::unique_ptr<XMLResource> Create(const std::string& path);
 	void Save(const std::string& path);
 	void Load(const std::string& path);
