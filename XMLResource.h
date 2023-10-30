@@ -7,7 +7,6 @@
 using iterator = std::list<std::shared_ptr<XML_Node>>::iterator;
 class XMLResource {
 public:
-	
 	static std::unique_ptr<XMLResource> Create(const std::string& path);
 	void Save(const std::string& path);
 	void Load(const std::string& path);
@@ -26,3 +25,4 @@ private:
 class XMLResource::XMLResourceClone : public XMLResource {
 	using XMLResource::XMLResource;
 };
+
